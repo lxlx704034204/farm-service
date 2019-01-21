@@ -1,9 +1,11 @@
 package com.yiyi.farm.entity.access;
 
 import com.yiyi.farm.enumeration.http.HttpMethodEnum;
+import lombok.Data;
 
 import java.util.Arrays;
 
+@Data
 public class AccessAuthEntity {
     private String url;
     private String methodName;
@@ -19,54 +21,5 @@ public class AccessAuthEntity {
         this.permission = permission;
     }
 
-    public String getUrl() {
-        return url;
-    }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getMethodName() {
-        return methodName;
-    }
-
-    public void setMethodName(String methodName) {
-        this.methodName = methodName;
-    }
-
-    public HttpMethodEnum getHttpMethodEnum() {
-        return httpMethodEnum;
-    }
-
-    public void setHttpMethodEnum(HttpMethodEnum httpMethodEnum) {
-        this.httpMethodEnum = httpMethodEnum;
-    }
-
-    public boolean isLogin() {
-        return isLogin;
-    }
-
-    public void setLogin(boolean login) {
-        isLogin = login;
-    }
-
-    public String[] getPermission() {
-        return permission;
-    }
-
-    public void setPermission(String[] permission) {
-        this.permission = permission;
-    }
-
-    @Override
-    public String toString() {
-        return "AccessAuthEntity{" +
-                "url='" + url + '\'' +
-                ", methodName='" + methodName + '\'' +
-                ", httpMethodEnum=" + httpMethodEnum +
-                ", isLogin=" + isLogin +
-                ", permission=" + Arrays.toString(permission) +
-                '}';
-    }
 }
